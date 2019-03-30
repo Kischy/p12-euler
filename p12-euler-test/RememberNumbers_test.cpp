@@ -59,7 +59,17 @@ TEST_F(RememberNumbersCheckerLongLongBool, CalcAndGetNumberAccordingToLambda) {
 
 }
 
+//Public functions
+TEST_F(RememberNumbersCheckerInt, ReturnsTrueOnCalculatedNumber) {
+	remembersnumbers_intint.calc_and_get_number(10);
+	ASSERT_TRUE(remembersnumbers_intint.number_has_been_saved(10));
+}
 
+
+TEST_F(RememberNumbersCheckerInt, ReturnsFalseOnNonCalculatedNumber) {
+	remembersnumbers_intint.calc_and_get_number(100);
+	ASSERT_FALSE(remembersnumbers_intint.number_has_been_saved(10));
+}
 
 
 
