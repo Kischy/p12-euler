@@ -23,7 +23,7 @@ unsigned long long TriangularNumbers::get_triangular(unsigned long long pos)
 }
 
 unsigned long long TriangularNumbers::get_triangular_number(unsigned long long pos)
-{
+{	
 
 	return triangular_numbers.calc_and_get_number(pos);
 }
