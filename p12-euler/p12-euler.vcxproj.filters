@@ -18,12 +18,18 @@
     <ClCompile Include="p12-euler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TriangularNumbers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IRememberNumbers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RememberNumbers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangularNumbers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
