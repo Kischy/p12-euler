@@ -157,6 +157,10 @@
   <ItemGroup>
     <ClCompile Include="p12-euler.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IRememberNumbers.h" />
+    <ClInclude Include="RememberNumbers.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
