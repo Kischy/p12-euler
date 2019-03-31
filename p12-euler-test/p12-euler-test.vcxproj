@@ -36,6 +36,7 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FactorsCounter-test.cpp" />
     <ClCompile Include="RememberNumbers_test.cpp" />
     <ClCompile Include="TriangularNumbers-test.cpp" />
     <ClCompile Include="pch.cpp">

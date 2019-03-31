@@ -159,6 +159,7 @@
     <ClCompile Include="TriangularNumbers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FactorsCounter.h" />
     <ClInclude Include="IRememberNumbers.h" />
     <ClInclude Include="RememberNumbers.h" />
     <ClInclude Include="TriangularNumbers.h" />
