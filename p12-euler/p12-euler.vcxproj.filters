@@ -35,5 +35,8 @@
     <ClInclude Include="FactorsCounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TriangularFactorsCounter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

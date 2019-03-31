@@ -5,9 +5,9 @@ class FactorsCounter
 {
 public:
 
-	unsigned long long get_number_of_divisors(const unsigned long long number) const
+	static unsigned long long get_number_of_divisors(const unsigned long long number) 
 	{
-		if (!is_valid_input(number)) return 0;
+		if (is_simple_number(number)) return number;
 
 		unsigned long long divisor_count = 2; //Set to two because the number is divisable by 1 and itself
 
@@ -24,15 +24,15 @@ public:
 
 private:
 
-	bool is_valid_input(const unsigned long long number) const
+	static bool is_simple_number(const unsigned long long number) 
 	{
-		if (number == 0) return false;
+		if (number <= 1) return true;
 
-		return true;
+		return false;
 	}
 
 
-	bool is_divisible(const unsigned long long number, const unsigned long long divisor) const
+	static bool is_divisible(const unsigned long long number, const unsigned long long divisor) 
 	{
 		return (number % divisor) == 0;
 	}
