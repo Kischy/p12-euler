@@ -26,7 +26,7 @@ public:
 
 private:
 
-	static bool is_simple_number(const InfInt& number)
+	inline static bool is_simple_number(const InfInt& number)
 	{
 		if (number <= 1) return true;
 
@@ -34,7 +34,7 @@ private:
 	}
 
 
-	static bool is_divisible(const InfInt& number, const InfInt& divisor)
+	inline static bool is_divisible(const InfInt& number, const InfInt& divisor)
 	{
 		return (number % divisor) == 0;
 	}
