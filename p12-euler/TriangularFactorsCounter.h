@@ -5,15 +5,17 @@
 #include "TriangularNumbers.h"
 
 
+
 class TriangularFactorsCounter
 {
 public:
-	unsigned long long get_first_triangular_with_divisors(const unsigned long long number_of_divisors) 
+	InfInt get_first_triangular_with_divisors(const unsigned long long number_of_divisors)
 	{
 		if (!is_valid_input(number_of_divisors)) return 0;
 
-		unsigned long long No_of_divisors = 0, current_triangular = 0, triangular_pos = 0;
+		unsigned long long No_of_divisors = 0, triangular_pos = 0;
 
+		InfInt current_triangular = 0;
 
 		while (No_of_divisors != number_of_divisors)
 		{
@@ -41,7 +43,7 @@ private:
 		return true;
 	}
 
-	unsigned long long get_triangular(const unsigned long long pos)
+	InfInt get_triangular(const unsigned long long pos)
 	{
 		return tri.get_triangular(pos);
 	}

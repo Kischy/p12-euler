@@ -26,7 +26,7 @@ TEST_F(TriangularFactorsCounterTest, GivesBackTriangularNumberWithNumberOfDiviso
 
 TEST_F(TriangularFactorsCounterTest, GivesBackTriangularNumberWithNumberOfDivisors_HighNumber)
 {
-	ASSERT_EQ(fac_count.get_first_triangular_with_divisors(100), 947376);
+	ASSERT_EQ(fac_count.get_first_triangular_with_divisors(10), 496);
 	//ASSERT_EQ(fac_count.get_first_triangular_with_divisors(200), 7248528);
 }
 
