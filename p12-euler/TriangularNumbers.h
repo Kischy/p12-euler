@@ -1,8 +1,6 @@
 #pragma once
 
-#include "RememberNumbers.h"
-
-#include <climits>
+#include <vector>
 
 
 class TriangularNumbers
@@ -11,15 +9,18 @@ public:
 
 	unsigned long long get_triangular( const unsigned long long pos);
 
-private:
-	   
-	RememberNumbers<unsigned long long, unsigned long long> triangular_numbers{ std::bind(&TriangularNumbers::calc_triangular_number, this,std::placeholders::_1) };
+private:   
 
-	unsigned long long get_triangular_number(const unsigned long long pos);
-
-	unsigned long long calc_triangular_number(const unsigned long long pos) const;
+	std::vector<unsigned long long> triangular_numbers{0,1};
 
 
+	unsigned long long calc_triangular_number(const unsigned long long pos) ;
+
+	bool triangular_has_been_saved(const unsigned long long pos) const;
+
+	void save_triangular_number(const unsigned long long triangular);
+
+	unsigned long long get_saved_triangular(const unsigned long long pos) const;
 
 };
 
