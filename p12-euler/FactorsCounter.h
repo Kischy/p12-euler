@@ -13,8 +13,9 @@ public:
 
 		unsigned long long divisor_count = 2; //Set to two because the number is divisable by 1 and itself
 
+		InfInt i = 2;
 
-		for (InfInt i = 2; i <= (number/2); ++i)
+		for (i = 2; i <= (number/2); ++i)
 		{
 			if (is_divisible(number, i)) divisor_count++;
 		}
