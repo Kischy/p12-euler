@@ -17,6 +17,7 @@ TEST_F(TriangularFactorsCounterTest, GivesBackZeroOnZeroCall)
 }
 
 
+
 TEST_F(TriangularFactorsCounterTest, GivesBackTriangularNumberWithNumberOfDivisors)
 {
 	unsigned long long first_triangular_with_four_divisors = 6;
@@ -26,7 +27,7 @@ TEST_F(TriangularFactorsCounterTest, GivesBackTriangularNumberWithNumberOfDiviso
 
 TEST_F(TriangularFactorsCounterTest, GivesBackTriangularNumberWithNumberOfDivisors_HighNumber)
 {
-	ASSERT_EQ(fac_count.get_first_triangular_with_divisors(20), 528);
+	ASSERT_EQ(fac_count.get_first_triangular_with_divisors(30), 209628);
 	//ASSERT_EQ(fac_count.get_first_triangular_with_divisors(200), 7248528);
 }
 

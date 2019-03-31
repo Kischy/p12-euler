@@ -2,27 +2,26 @@
 
 #include <vector>
 
-#include "InfInt.h"
 
 
 class TriangularNumbers
 {
 public:
 
-	InfInt get_triangular( const unsigned long long pos);
+	unsigned long long get_triangular( const unsigned long long pos);
 
 private:   
 
-	std::vector<InfInt> triangular_numbers{0,1};
+	std::vector<unsigned long long> triangular_numbers{0,1};
 
 
-	InfInt calc_triangular_number(const unsigned long long pos) ;
+	inline unsigned long long calc_triangular_number(const unsigned long long pos) ;
 
-	bool triangular_has_been_saved(const unsigned long long pos) const;
+	inline bool triangular_has_been_saved(const unsigned long long pos) const;
 
-	void save_triangular_number(const InfInt triangular);
+	inline void save_triangular_number(const unsigned long long triangular);
 
-	InfInt get_saved_triangular(const unsigned long long pos) const;
+	inline unsigned long long get_saved_triangular(const unsigned long long pos) const;
 
 };
 

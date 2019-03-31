@@ -1,27 +1,25 @@
 #include <iostream>
 
 
+
 #include "TriangularFactorsCounter.h"
 
 
-#include "InfInt.h"
+
 
 
 int main(int argc, char **argv)
 {
-	InfInt p12_answ = 0, triangle = 0;
+
+	std::cout << "Calculation started" << std::endl;
+
+	unsigned long long p12_answ = 0;
+	TriangularFactorsCounter tri_fac_count; 
+
+	p12_answ = tri_fac_count.get_first_triangular_with_divisors(500);
 
 
-	TriangularNumbers numbers;
-
-	triangle = numbers.get_triangular(10000);
-
-
-
-	p12_answ = FactorsCounter::get_number_of_divisors(triangle);
-
-
-	std::cout << "The answer to the 12th problem of ProjectEuler.Net is " << triangle << ".\n";
+	std::cout << "The answer to the 12th problem of ProjectEuler.Net is " << p12_answ << ".\n";
 
 
 	return 0;
