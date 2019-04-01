@@ -20,7 +20,7 @@ TEST_F(DivisorsFactorizationTesting, FindAllPossibleFactorizationsOf16)
 
 	std::vector<std::vector<unsigned long long >> result = divisors.get_all_factorizations(16);
 
-	for (unsigned int i = 0; i <= 4; ++i)
+	for (unsigned int i = 0; i < allFacsof_16.size(); ++i)
 	{
 		ASSERT_EQ(allFacsof_16.at(i), result.at(i));
 	}
@@ -34,9 +34,22 @@ TEST_F(DivisorsFactorizationTesting, FindAllPossibleFactorizationsOf465)
 
 	std::vector<std::vector<unsigned long long >> result = divisors.get_all_factorizations(465);
 
-	for (unsigned int i = 0; i <= 4; ++i)
+	for (unsigned int i = 0; i < allFacsof_465.size(); ++i)
 	{
 		ASSERT_EQ(allFacsof_465.at(i), result.at(i));
+	}
+
+}
+
+TEST_F(DivisorsFactorizationTesting, FindAllPossibleFactorizationsOf11)
+{
+	std::vector<std::vector<unsigned long long >> allFacsof_11 = { {11} };
+
+	std::vector<std::vector<unsigned long long >> result = divisors.get_all_factorizations(11);
+
+	for (unsigned int i = 0; i < allFacsof_11.size(); ++i)
+	{
+		ASSERT_EQ(allFacsof_11.at(i), result.at(i));
 	}
 
 }
