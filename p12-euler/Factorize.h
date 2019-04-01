@@ -10,28 +10,81 @@ class Factorize
 {
 public:
 
-	std::vector<unsigned long long> factorize(unsigned long long number) 
+	std::vector<unsigned long long> factorize(const unsigned long long number) 
 	{
-		intern_factors.clear();
-			
-		if (is_number_to_low(number) == true)
-		{
-			intern_factors.push_back(number);
-			return intern_factors;
-		}
-
-		factor_to_intern_vector(number);
+		factorize_pr(number);
 
 		return intern_factors;
 	}
 
 
+	std::vector<unsigned long long> factorize_exponent(const unsigned long long number)
+	{
+		factorize_with_exponents(number);
+
+		return intern_factors_with_exponents;
+	}
+
+
+
 
 private:
 	PrimeChecker primechecker;
-	std::vector<unsigned long long> intern_factors;
+	std::vector<unsigned long long> intern_factors{};
+	std::vector<unsigned long long> intern_factors_with_exponents{};
+
+
+	void factorize_pr(const unsigned long long number)
+	{
+		intern_factors.clear();
+
+		if (is_number_to_low(number))
+		{
+			intern_factors.push_back(number);
+			return;
+		}
+
+		factor_to_intern_vector(number);
+	}
+
+
+	void factorize_with_exponents(const unsigned long long number)
+	{
+		factorize_pr(number);
+		if (intern_factors.empty()) return;
+
+		intern_factors_with_exponents.clear();
+
+		unsigned long long fac = intern_factors.at(0), exponent = 0;
+
+		for (unsigned long long factor : intern_factors)
+		{
+			if (fac == factor)
+			{
+				exponent++;
+			}
+			else
+			{
+				add_factor_and_exponent(fac, exponent);
+				fac = factor;
+				exponent = 1;
+			}
+		}
+
+		// Add the last number
+		add_factor_and_exponent(fac, exponent);
+	}
+
 	
-	bool is_number_to_low(unsigned long long number)
+
+	void add_factor_and_exponent(const unsigned long long factor, const unsigned long long exponent)
+	{
+		intern_factors_with_exponents.push_back(factor);
+		intern_factors_with_exponents.push_back(exponent);
+	}
+
+	
+	bool is_number_to_low(const unsigned long long number)
 	{
 		if (number <= 3)
 			return true;
@@ -56,7 +109,7 @@ private:
 
 
 
-	unsigned long long find_lowest_prime_factor(unsigned long long number)
+	unsigned long long find_lowest_prime_factor(const unsigned long long number)
 	{
 		for (unsigned long long i = 2; i <= number; ++i)
 		{
@@ -68,10 +121,12 @@ private:
 				}
 			}
 		}
+
+		return number;
 	}
 
 
-	bool is_divisable(unsigned long long number, unsigned long long divisor)
+	bool is_divisable(const unsigned long long number, const unsigned long long divisor)
 	{
 		return (number % divisor) == 0;
 	}
