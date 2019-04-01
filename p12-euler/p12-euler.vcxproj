@@ -156,7 +156,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>C:\Cloud 2\Programmierung\C++\libraries\boost_1_67_0;C:\Cloud 2\Programmierung\C++\libraries\boost_1_67_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -173,10 +173,12 @@
     <ClCompile Include="TriangularNumbers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Divisors.h" />
     <ClInclude Include="Factorize.h" />
     <ClInclude Include="FactorsCounter.h" />
     <ClInclude Include="IRememberNumbers.h" />
     <ClInclude Include="PrimeChecker.h" />
+    <ClInclude Include="PrimeNumbers.h" />
     <ClInclude Include="RememberNumbers.h" />
     <ClInclude Include="TriangularFactorsCounter.h" />
     <ClInclude Include="TriangularNumbers.h" />

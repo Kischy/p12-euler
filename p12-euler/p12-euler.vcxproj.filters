@@ -44,5 +44,11 @@
     <ClInclude Include="Factorize.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Divisors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimeNumbers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

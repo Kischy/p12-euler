@@ -1,48 +1,54 @@
 #pragma once
 
 
+#include "Factorize.h"
+
 class FactorsCounter
 {
 public:
 
-	static unsigned long long get_number_of_divisors(const unsigned long long& number)
+	unsigned long long get_number_of_divisors(const unsigned long long number)
 	{
 		if (is_simple_number(number)) return get_simple_number(number);
 
-		unsigned long long divisor_count = 2; //Set to two because the number is divisable by 1 and itself
-
-		unsigned long long i = 2, upper = number/2;
-
-		if (is_divisible(number, 2))
-		{
-			for (i = 2; i <= upper; ++i)
-			{
-				if (is_divisible(number, i)) divisor_count++;
-			}
-		}
-		else
-		{
-			for (i = 3; i <= upper; i+=2)
-			{
-				if (is_divisible(number, i)) divisor_count++;
-			}
-		}
+		std::vector<unsigned long long> fac_exp = factorizer.factorize_exponent(number);
 
 
-		return divisor_count;
+		return get_num_divisors(number);
 	}
 
 
 private:
+	Factorize factorizer;
 
-	inline static bool is_simple_number(const unsigned long long& number)
+
+
+	unsigned long long get_num_divisors(const unsigned long long number)
+	{
+		std::vector<unsigned long long> fac_exp = factorizer.factorize_exponent(number);
+
+		unsigned long long no_of_divisors = 1;
+
+
+		//Every second element is a exponent
+		for (std::vector<unsigned long long>::size_type i = 1; i < fac_exp.size(); i += 2)
+		{
+			no_of_divisors *= (fac_exp.at(i) + 1);
+		}
+
+		return no_of_divisors;
+
+	}
+
+
+	bool is_simple_number(const unsigned long long number) const
 	{
 		if (number <= 1) return true;
 
 		return false;
 	}
 
-	inline static unsigned long long get_simple_number(const unsigned long long& number)
+	unsigned long long get_simple_number(const unsigned long long number) const
 	{
 		if (number == 1) return 1;
 
@@ -50,10 +56,6 @@ private:
 	}
 
 
-	inline static bool is_divisible(const unsigned long long& number, const unsigned long long& divisor)
-	{
-		return (number % divisor) == 0;
-	}
 
 
 
