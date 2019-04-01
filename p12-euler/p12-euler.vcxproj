@@ -173,8 +173,10 @@
     <ClCompile Include="TriangularNumbers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Factorize.h" />
     <ClInclude Include="FactorsCounter.h" />
     <ClInclude Include="IRememberNumbers.h" />
+    <ClInclude Include="PrimeChecker.h" />
     <ClInclude Include="RememberNumbers.h" />
     <ClInclude Include="TriangularFactorsCounter.h" />
     <ClInclude Include="TriangularNumbers.h" />

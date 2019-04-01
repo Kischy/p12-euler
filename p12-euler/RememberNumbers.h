@@ -17,18 +17,13 @@ public:
 
 	virtual T_value calc_and_get_number(T_key num_key) override
 	{
-		if (num_has_been_saved(num_key)) return get_number(num_key);
+		if (number_has_been_saved(num_key)) return get_number(num_key);
 
 
 		T_value num_val = test_number_key_function(num_key);
 		save_number(num_key, num_val);
 
 		return num_val;
-	}
-
-	virtual bool number_has_been_saved(T_key num_key) const override
-	{
-		return num_has_been_saved(num_key);
 	}
 
 
@@ -45,7 +40,7 @@ private:
 		return it->second;
 	}
 
-	bool num_has_been_saved(T_key num_key) const
+	bool number_has_been_saved(T_key num_key) const
 	{
 		auto it = saved_numbers.find(num_key);
 

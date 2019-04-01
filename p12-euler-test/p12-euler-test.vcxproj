@@ -36,8 +36,10 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Factorize-test.cpp" />
     <ClCompile Include="FactorsCounter-test.cpp" />
-    <ClCompile Include="RememberNumbers_test.cpp" />
+    <ClCompile Include="PrimeChecker-test.cpp" />
+    <ClCompile Include="RememberNumbers-test.cpp" />
     <ClCompile Include="TriangularFactorsCounter-test.cpp" />
     <ClCompile Include="TriangularNumbers-test.cpp" />
     <ClCompile Include="pch.cpp">

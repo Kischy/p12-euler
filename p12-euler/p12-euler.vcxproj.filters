@@ -38,5 +38,11 @@
     <ClInclude Include="TriangularFactorsCounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PrimeChecker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Factorize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
