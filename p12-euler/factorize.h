@@ -96,7 +96,7 @@ private:
 	void factor_to_intern_vector(unsigned long long number)
 	{
 
-		while (primechecker.is_prime_number_static(number) == false)
+		while (!primechecker.is_prime_number(number))
 		{
 			unsigned long long lowest = find_lowest_prime_factor(number);
 			intern_factors.push_back(lowest);
@@ -111,11 +111,12 @@ private:
 
 	unsigned long long find_lowest_prime_factor(const unsigned long long number)
 	{
+		// Do this function by goint through all prime numbers use PrimeNumbers class from project 10 or 7
 		for (unsigned long long i = 2; i <= number; ++i)
 		{
-			if (primechecker.is_prime_number_static(i) == true)
+			if (primechecker.is_prime_number(i))
 			{
-				if (is_divisable(number, i) == true)
+				if (is_divisable(number, i))
 				{
 					return i;
 				}

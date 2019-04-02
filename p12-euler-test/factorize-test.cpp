@@ -55,6 +55,13 @@ TEST_F(FactorizeChecker, FactorizationOf36)
 	ASSERT_EQ(factorize.factorize(36), factors);
 }
 
+TEST_F(FactorizeChecker, FactorizationOf720720)
+{
+	std::vector<unsigned long long> factors = { 2,2,2,2,3,3,5,7,11,13 };
+	ASSERT_EQ(factorize.factorize(720720), factors);
+}
+
+
 
 TEST_F(FactorizeChecker, HandelingOfLowNumbers)
 {
@@ -65,6 +72,18 @@ TEST_F(FactorizeChecker, HandelingOfLowNumbers)
 	std::vector<unsigned long long> factor3 = { 0 };
 	ASSERT_EQ(factorize.factorize(0), factor3);
 }
+
+
+
+TEST_F(FactorizeChecker, PerformenceChecker) //Takes about 500 ms at the moment
+{
+	for (unsigned long long i = 0; i < 10000; ++i)
+	{
+		factorize.factorize(i);
+	}
+}
+
+
 
 
 TEST_F(FactorizeExponentialChecker, FactorizeWithExponent_number_36)
@@ -107,5 +126,15 @@ TEST_F(FactorizeExponentialChecker, FactorizeWithExponent_number_9646541212452)
 	std::vector<unsigned long long> factors = { 2,2,3,1,23,1,139,1,8941,1,28123,1 };
 	ASSERT_EQ(factorize.factorize_exponent(9646541212452), factors);
 }
+
+
+TEST_F(FactorizeExponentialChecker, PerformenceChecker) //Takes about 500 ms at the moment
+{
+	for (unsigned long long i = 0; i < 10000; ++i)
+	{
+		factorize.factorize_exponent(i);
+	}
+}
+
 
 
