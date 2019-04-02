@@ -113,8 +113,6 @@ private:
 
 	unsigned long long find_lowest_prime_factor(const unsigned long long number)
 	{
-		// Do this function by goint through all prime numbers use PrimeNumbers class from project 10 or 7
-
 		unsigned long long current_prime = 2;
 
 		for (unsigned long long prime_i = 1; current_prime <= number; ++prime_i)

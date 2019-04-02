@@ -13,18 +13,9 @@ public:
 
 	std::vector<std::vector<unsigned long long> > get_all_factorizations(unsigned long long No_of_divisors)
 	{
+		calc_all_factorizations(No_of_divisors);
 
-		std::vector<unsigned long long> prime_factors = fac.factorize(No_of_divisors);
-
-		std::vector<std::vector<unsigned long long> > factorizations = all_factorizations(prime_factors);
-
-
-		std::sort(factorizations.begin(),factorizations.end(), [](const std::vector<unsigned long long>& lhs, const std::vector<unsigned long long>& rhs)
-		{
-			return lhs.at(0) < rhs.at(0);
-		});
-
-		return factorizations;
+		return all_factorizations_vec;
 	}
 
 
@@ -32,31 +23,36 @@ public:
 private:
 
 	Factorize fac;
+	std::vector<std::vector<unsigned long long> > all_factorizations_vec{};
 
-	unsigned long long lowest_with_N_divisors(unsigned long long No_of_divisors) 
+
+	void calc_all_factorizations(unsigned long long No_of_divisors)
 	{
+		all_factorizations_vec.clear();
 
-		std::vector<unsigned long long> fac_exp = fac.factorize_exponent(No_of_divisors);
+		std::vector<unsigned long long> prime_factors = fac.factorize(No_of_divisors);
+		all_factorizations_vec = get_all_factorizations(prime_factors);
 
-		return 0;
+
+		sort_multiple_vec_ascending_first_element(all_factorizations_vec);
 	}
 
-	std::vector<std::vector<unsigned long long> > all_factorizations(std::vector<unsigned long long>& prime_factors)
+
+	std::vector<std::vector<unsigned long long> > get_all_factorizations(std::vector<unsigned long long>& prime_factors)
 	{
 		std::vector<std::vector<unsigned long long> > all_factors;
 
-		std::sort(prime_factors.begin(), prime_factors.end(), std::greater<unsigned long long>());
-
+		sort_single_vec_descending(prime_factors);
 		all_factors.push_back(prime_factors);
 
 		std::vector<unsigned long long>::size_type index = 0, index2 = 1;
-
-		all_fac(all_factors, all_factors.at(0), index,index2);
+		add_all_poss_fac(all_factors, all_factors.at(0), index, index2);
 
 		return all_factors;
 	}
 
-	void all_fac(std::vector<std::vector<unsigned long long> >& factors, const std::vector<unsigned long long> last_factors, std::vector<unsigned long long>::size_type& current_first_index, std::vector<unsigned long long>::size_type& current_second_index)
+
+	void add_all_poss_fac(std::vector<std::vector<unsigned long long> >& factors, const std::vector<unsigned long long> last_factors, std::vector<unsigned long long>::size_type& current_first_index, std::vector<unsigned long long>::size_type& current_second_index)
 	{
 		if (last_factors.size() <= 1) return;
 
@@ -67,8 +63,9 @@ private:
 			{
 				factors.push_back(new_factors);
 				std::vector<unsigned long long>::size_type index = 0, index2 = 1;
-				all_fac(factors, factors.at(factors.size()-1), index, index2);
+				add_all_poss_fac(factors, factors.at(factors.size()-1), index, index2);
 			}
+
 			increase_indizes(last_factors, current_first_index, current_second_index);
 		}
 	}
@@ -94,16 +91,15 @@ private:
 
 		for (std::vector<unsigned long long>::size_type i = 0; i < last_factors.size(); ++i)
 		{
-			if (i != current_first_index && i != current_second_index)
+			if ( (i != current_first_index) && (i != current_second_index))
 			{
 				new_factors.push_back(last_factors.at(i));
 			}
 		}
 
-		std::sort(new_factors.begin(), new_factors.end(), std::greater<unsigned long long>());
+		sort_single_vec_descending(new_factors);
 
 		return new_factors;
-
 	}
 
 
@@ -119,8 +115,7 @@ private:
 
 	void increase_indizes(const std::vector<unsigned long long>& factors, std::vector<unsigned long long>::size_type& current_first_index, std::vector<unsigned long long>::size_type& current_second_index)
 	{
-		unsigned long long size = factors.size();		
-
+		unsigned long long size = factors.size();
 
 		if (current_second_index < (size - 1))
 		{
@@ -132,6 +127,22 @@ private:
 			current_second_index=current_first_index+1;
 		}
 	}
+
+
+
+	void sort_single_vec_descending(std::vector<unsigned long long>& to_be_sorted)
+	{
+		std::sort(to_be_sorted.begin(), to_be_sorted.end(), std::greater<unsigned long long>());
+	}
+
+	void sort_multiple_vec_ascending_first_element(std::vector<std::vector<unsigned long long> >& to_be_sorted)
+	{
+		std::sort(to_be_sorted.begin(), to_be_sorted.end(), [](const std::vector<unsigned long long>& lhs, const std::vector<unsigned long long>& rhs)
+		{
+			return lhs.at(0) < rhs.at(0);
+		});
+	}
+
 
 
 

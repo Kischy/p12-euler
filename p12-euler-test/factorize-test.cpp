@@ -74,7 +74,7 @@ TEST_F(FactorizeChecker, HandelingOfLowNumbers)
 }
 
 
-
+/*
 TEST_F(FactorizeChecker, PerformenceChecker) //Takes about 360 ms at the moment
 {
 	for (unsigned long long i = 0; i < 10000; ++i)
@@ -82,7 +82,7 @@ TEST_F(FactorizeChecker, PerformenceChecker) //Takes about 360 ms at the moment
 		factorize.factorize(i);
 	}
 }
-
+*/
 
 
 
@@ -127,7 +127,7 @@ TEST_F(FactorizeExponentialChecker, FactorizeWithExponent_number_9646541212452)
 	ASSERT_EQ(factorize.factorize_exponent(9646541212452), factors);
 }
 
-
+/*
 TEST_F(FactorizeExponentialChecker, PerformenceChecker) //Takes about 360 ms at the moment
 {
 	for (unsigned long long i = 0; i < 10000; ++i)
@@ -135,6 +135,5 @@ TEST_F(FactorizeExponentialChecker, PerformenceChecker) //Takes about 360 ms at 
 		factorize.factorize_exponent(i);
 	}
 }
-
-
+*/
 
