@@ -29,6 +29,7 @@ public:
 
 
 private:
+	PrimeChecker primechecker;
 	std::vector<unsigned long long> intern_factors{};
 	std::vector<unsigned long long> intern_factors_with_exponents{};
 
@@ -95,7 +96,7 @@ private:
 	void factor_to_intern_vector(unsigned long long number)
 	{
 
-		while (PrimeChecker::is_prime_number_static(number) == false)
+		while (primechecker.is_prime_number_static(number) == false)
 		{
 			unsigned long long lowest = find_lowest_prime_factor(number);
 			intern_factors.push_back(lowest);
@@ -112,7 +113,7 @@ private:
 	{
 		for (unsigned long long i = 2; i <= number; ++i)
 		{
-			if (PrimeChecker::is_prime_number_static(i) == true)
+			if (primechecker.is_prime_number_static(i) == true)
 			{
 				if (is_divisable(number, i) == true)
 				{
