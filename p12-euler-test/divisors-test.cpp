@@ -95,16 +95,13 @@ TEST_F(DivisorsFactorizationTesting, HandelingOfLowNumbers)
 TEST_F(FindNumbersOfDivisorsTesting, LowestNumberWith_500_Divisors)
 {
 	unsigned long long lowest_500_divisors = 62370000;
-
 	ASSERT_EQ(divisors.lowest_number(500), lowest_500_divisors);
-
-
 }
 
-TEST_F(FindNumbersOfDivisorsTesting, LowestNumberWith_3_Divisors)
+TEST_F(FindNumbersOfDivisorsTesting, LowestNumberWith_6_Divisors)
 {
-	unsigned long long lowest_3_divisors = 8;
-	ASSERT_EQ(divisors.lowest_number(3), lowest_3_divisors);
+	unsigned long long lowest_6_divisors = 12;
+	ASSERT_EQ(divisors.lowest_number(6), lowest_6_divisors);
 }
 
 

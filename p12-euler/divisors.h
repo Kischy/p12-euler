@@ -10,6 +10,9 @@
 #include "math_helper.h"
 
 
+//Only neccessary for get_minimal_number_in_vector
+#include <climits>
+
 
 class Divisors
 {
@@ -61,6 +64,7 @@ private:
 		for (auto exponent : factorization)
 		{
 			pos_min *= get_pow_of_prime(prime_pos, exponent - 1);
+			prime_pos++;
 		}
 
 		return pos_min;
@@ -73,7 +77,20 @@ private:
 
 	unsigned long long get_minimal_number_in_vector(const std::vector<unsigned long long>& numbers)
 	{
-		return *(std::min_element(numbers.begin(), numbers.end()) );
+		unsigned long long min = ULLONG_MAX;
+
+		for (auto number : numbers)
+		{
+			if (number != 0) //Skip zero, because the unsigned long long might overflow
+			{
+				if (number < min)
+				{
+					min = number;
+				}
+			}
+		}
+
+		return min;
 	}
 
 
