@@ -2,6 +2,7 @@
 
 #include <vector>
 #include "primechecker.h"
+#include "primenumbers.h"
 
 
 
@@ -30,6 +31,7 @@ public:
 
 private:
 	PrimeChecker primechecker;
+	PrimeNumbers primenumbers;
 	std::vector<unsigned long long> intern_factors{};
 	std::vector<unsigned long long> intern_factors_with_exponents{};
 
@@ -112,14 +114,15 @@ private:
 	unsigned long long find_lowest_prime_factor(const unsigned long long number)
 	{
 		// Do this function by goint through all prime numbers use PrimeNumbers class from project 10 or 7
-		for (unsigned long long i = 2; i <= number; ++i)
+
+		unsigned long long current_prime = 2;
+
+		for (unsigned long long prime_i = 1; current_prime <= number; ++prime_i)
 		{
-			if (primechecker.is_prime_number(i))
+			current_prime = primenumbers.get_prime(prime_i);
+			if (is_divisable(number, current_prime))
 			{
-				if (is_divisable(number, i))
-				{
-					return i;
-				}
+				return current_prime;
 			}
 		}
 
