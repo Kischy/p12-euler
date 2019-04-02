@@ -169,6 +169,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="math_helper.cpp" />
     <ClCompile Include="p12-euler.cpp" />
     <ClCompile Include="triangularnumbers.cpp" />
   </ItemGroup>
@@ -177,6 +178,7 @@
     <ClInclude Include="factorize.h" />
     <ClInclude Include="factorscounter.h" />
     <ClInclude Include="iremembernumbers.h" />
+    <ClInclude Include="math_helper.h" />
     <ClInclude Include="primechecker.h" />
     <ClInclude Include="primenumbers.h" />
     <ClInclude Include="remembernumbers.h" />

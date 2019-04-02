@@ -39,6 +39,7 @@
     <ClCompile Include="divisors-test.cpp" />
     <ClCompile Include="factorize-test.cpp" />
     <ClCompile Include="factorscounter-test.cpp" />
+    <ClCompile Include="math_helper-test.cpp" />
     <ClCompile Include="primechecker-test.cpp" />
     <ClCompile Include="primenumbers-test.cpp" />
     <ClCompile Include="remembernumbers-test.cpp" />
