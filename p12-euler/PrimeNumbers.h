@@ -1,6 +1,6 @@
 #pragma once
 
-#include "PrimeChecker.h"
+#include "primechecker.h"
 
 #include <climits>
 

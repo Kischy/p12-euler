@@ -170,18 +170,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="p12-euler.cpp" />
-    <ClCompile Include="TriangularNumbers.cpp" />
+    <ClCompile Include="triangularnumbers.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Divisors.h" />
-    <ClInclude Include="Factorize.h" />
-    <ClInclude Include="FactorsCounter.h" />
-    <ClInclude Include="IRememberNumbers.h" />
-    <ClInclude Include="PrimeChecker.h" />
-    <ClInclude Include="PrimeNumbers.h" />
-    <ClInclude Include="RememberNumbers.h" />
-    <ClInclude Include="TriangularFactorsCounter.h" />
-    <ClInclude Include="TriangularNumbers.h" />
+    <ClInclude Include="divisors.h" />
+    <ClInclude Include="factorize.h" />
+    <ClInclude Include="factorscounter.h" />
+    <ClInclude Include="iremembernumbers.h" />
+    <ClInclude Include="primechecker.h" />
+    <ClInclude Include="primenumbers.h" />
+    <ClInclude Include="remembernumbers.h" />
+    <ClInclude Include="triangularfactorscounter.h" />
+    <ClInclude Include="triangularnumbers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

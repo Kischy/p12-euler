@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../p12-euler/PrimeChecker.h"
+#include "../p12-euler/primechecker.h"
 
 
 class PrimeCheckerTesting : public testing::Test

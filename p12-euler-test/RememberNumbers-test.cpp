@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../p12-euler/RememberNumbers.h"
+#include "../p12-euler/remembernumbers.h"
 
 class RememberNumbersCheckerInt : public testing::Test
 {

@@ -18,36 +18,36 @@
     <ClCompile Include="p12-euler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TriangularNumbers.cpp">
+    <ClCompile Include="triangularnumbers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IRememberNumbers.h">
+    <ClInclude Include="divisors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RememberNumbers.h">
+    <ClInclude Include="factorize.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TriangularNumbers.h">
+    <ClInclude Include="factorscounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FactorsCounter.h">
+    <ClInclude Include="iremembernumbers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TriangularFactorsCounter.h">
+    <ClInclude Include="primechecker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PrimeChecker.h">
+    <ClInclude Include="primenumbers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Factorize.h">
+    <ClInclude Include="remembernumbers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Divisors.h">
+    <ClInclude Include="triangularfactorscounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PrimeNumbers.h">
+    <ClInclude Include="triangularnumbers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

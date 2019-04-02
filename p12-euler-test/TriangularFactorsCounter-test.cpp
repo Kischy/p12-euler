@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../p12-euler/TriangularFactorsCounter.h"
+#include "../p12-euler/triangularfactorscounter.h"
 
 
 class TriangularFactorsCounterTest : public testing::Test

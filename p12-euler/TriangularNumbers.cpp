@@ -1,4 +1,4 @@
-#include "TriangularNumbers.h"
+#include "triangularnumbers.h"
 
 
 namespace //anonymous namespace

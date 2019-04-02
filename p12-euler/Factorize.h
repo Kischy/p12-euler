@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include "PrimeChecker.h"
+#include "primechecker.h"
 
 
 

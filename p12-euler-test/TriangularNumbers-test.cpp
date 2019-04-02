@@ -1,7 +1,7 @@
 #include "pch.h"
 
-#include "../p12-euler/TriangularNumbers.h"
-#include "../p12-euler/TriangularNumbers.cpp"
+#include "../p12-euler/triangularnumbers.h"
+#include "../p12-euler/triangularnumbers.cpp"
 
 class TriangularNumbersTest : public testing::Test
 {

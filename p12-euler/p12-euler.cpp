@@ -1,9 +1,9 @@
 #include <iostream>
 
 
-#include "TriangularFactorsCounter.h"
+#include "triangularfactorscounter.h"
 
-#include "Divisors.h"
+#include "divisors.h"
 
 
 

@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../p12-euler/FactorsCounter.h"
+#include "../p12-euler/factorscounter.h"
 
 class FactorsCounterTest : public testing::Test
 {

@@ -1,8 +1,8 @@
 #include "pch.h"
 
-#include "../p12-euler/Divisors.h"
+#include "../p12-euler/divisors.h"
 
-#include "../p12-euler/Factorize.h"
+#include "../p12-euler/factorize.h"
 
 class DivisorsFactorizationTesting : public testing::Test
 {

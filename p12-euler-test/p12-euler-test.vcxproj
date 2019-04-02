@@ -36,14 +36,14 @@
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Divisors-test.cpp" />
-    <ClCompile Include="Factorize-test.cpp" />
-    <ClCompile Include="FactorsCounter-test.cpp" />
-    <ClCompile Include="PrimeChecker-test.cpp" />
-    <ClCompile Include="PrimeNumbers-test.cpp" />
-    <ClCompile Include="RememberNumbers-test.cpp" />
-    <ClCompile Include="TriangularFactorsCounter-test.cpp" />
-    <ClCompile Include="TriangularNumbers-test.cpp" />
+    <ClCompile Include="divisors-test.cpp" />
+    <ClCompile Include="factorize-test.cpp" />
+    <ClCompile Include="factorscounter-test.cpp" />
+    <ClCompile Include="primechecker-test.cpp" />
+    <ClCompile Include="primenumbers-test.cpp" />
+    <ClCompile Include="remembernumbers-test.cpp" />
+    <ClCompile Include="triangularfactorscounter-test.cpp" />
+    <ClCompile Include="triangularnumbers-test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

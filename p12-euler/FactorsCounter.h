@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "Factorize.h"
+#include "factorize.h"
 
 class FactorsCounter
 {

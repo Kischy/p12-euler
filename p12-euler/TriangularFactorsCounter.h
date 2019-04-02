@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "FactorsCounter.h"
-#include "TriangularNumbers.h"
+#include "factorscounter.h"
+#include "triangularnumbers.h"
 
 
 

@@ -1,6 +1,6 @@
 #include "pch.h"
 
-#include "../p12-euler/Factorize.h"
+#include "../p12-euler/factorize.h"
 
 
 class FactorizeChecker : public testing::Test
